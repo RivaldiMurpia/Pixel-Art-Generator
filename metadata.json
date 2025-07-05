@@ -1,0 +1,5 @@
+{
+  "name": "Pixel Art Asset Generator",
+  "description": "An application that uses Google's Imagen model to generate pixel art game assets from text prompts. Perfect for game developers and artists looking for inspiration or quick assets.",
+  "requestFramePermissions": []
+}

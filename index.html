@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Art Asset Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Using a more pixel-art friendly font */
+      @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+      body {
+        font-family: 'Press Start 2P', cursive;
+      }
+      /* Ensure crisp pixels when images are scaled by the browser */
+      .pixelated-rendering {
+        image-rendering: pixelated;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: crisp-edges;
+      }
+      /* Custom checkbox for spritesheet selection */
+      .custom-checkbox input {
+        display: none;
+      }
+      .custom-checkbox .checkmark {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-color: rgba(22, 32, 53, 0.8);
+        border: 2px solid #334155;
+        transition: all 0.2s;
+      }
+      .custom-checkbox input:checked + .checkmark {
+        background-color: #4f46e5;
+        border-color: #a5b4fc;
+      }
+      .custom-checkbox .checkmark:after {
+        content: "";
+        display: none;
+        position: relative;
+        left: 7px;
+        top: 3px;
+        width: 6px;
+        height: 12px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+      }
+      .custom-checkbox input:checked + .checkmark:after {
+        display: block;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.8.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-900 text-white">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
